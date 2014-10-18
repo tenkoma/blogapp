@@ -1,0 +1,17 @@
+{
+    "name": "tenkoma/blogapp",
+    "description": "sample blog application",
+    "authors": [
+        {
+            "name": "Koji Tanaka",
+            "email": "tenkoma@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "Vendor"
+    },
+    "require": {
+        "cakephp/cakephp": "2.5.*",
+        "josegonzalez/cakephp-environments": "1.0.0"
+    }
+}
