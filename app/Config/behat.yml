@@ -1,0 +1,10 @@
+default:
+  paths:
+    features: ../../features
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url:  'http://test.localhost/'
+      goutte:
+        guzzle_parameters:
+          request.params:
+            redirect.disable: true
