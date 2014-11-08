@@ -74,7 +74,7 @@ class DATABASE_CONFIG {
             'host' => $this->read('MYSQL_DB_HOST'),
             'login' => $this->read('MYSQL_USERNAME'),
             'password' => $this->read('MYSQL_PASSWORD'),
-            'database' => $this->read('MYSQL_DB_NAME'),
+            'database' => $this->read('MYSQL_TEST_DB_NAME'),
             'prefix' => $this->read('MYSQL_PREFIX'),
             'encoding' => 'utf8',
         ];
