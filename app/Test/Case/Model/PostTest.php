@@ -41,6 +41,9 @@ class PostTest extends CakeTestCase {
 
     /**
      * @dataProvider exampleValidationErrors
+     * @param $column
+     * @param $value
+     * @param $message
      */
     public function testバリデーションエラー($column, $value, $message)
     {
