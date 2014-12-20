@@ -24,8 +24,5 @@
         </article>
         <footer></footer>
 	</div>
-    <div class="panel panel-default">
-        <?= $this->element('sql_dump') ?>
-    </div>
 </body>
 </html>

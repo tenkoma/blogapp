@@ -25,7 +25,6 @@ class AppController extends Controller {
     public $components = [
         'DebugKit.Toolbar',
     ];
-    
     public $helpers = [
         'Html' => ['className' => 'BoostCake.BoostCakeHtml'],
         'Form' => ['className' => 'BoostCake.BoostCakeForm'],
