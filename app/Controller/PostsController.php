@@ -6,12 +6,12 @@ App::uses('AppController', 'Controller');
  *
  */
 class PostsController extends AppController {
+
 	public $components = [
 		'Paginator',
 		'RequestHandler',
 		'Session',
 	];
-
 
 	public function index() {
 		$this->Paginator->settings = [
