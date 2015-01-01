@@ -16,7 +16,9 @@
     </section>
 <?php endforeach; ?>
 <ul class="pagination">
-<?= $this->Paginator->prev('&laquo;', ['escape'=>false, 'tag'=>'li'], null, ['class'=>'prev disabled', 'escape'=>false, 'tag'=>'li', 'disabledTag'=>'a']) ?>
-<?= $this->Paginator->numbers(['separator'=>'', 'tag'=>'li', 'currentTag'=>'a', 'currentClass'=>'active']) ?>
-<?= $this->Paginator->next('&raquo;', ['escape'=>false, 'tag'=>'li'], null, ['class'=>'next disabled', 'escape'=>false, 'tag'=>'li', 'disabledTag'=>'a']) ?>
+<?= $this->Paginator->prev('&laquo;',
+    ['escape'=>false, 'tag'=>'li', 'url'=>['controller'=>'posts', 'action'=>'index', 'user_account'=>$this->request->user_account]],
+    null, ['class'=>'prev disabled', 'escape'=>false, 'tag'=>'li', 'disabledTag'=>'a']) ?>
+<?= $this->Paginator->numbers(['separator'=>'', 'tag'=>'li', 'currentTag'=>'a', 'currentClass'=>'active', 'url'=>['controller'=>'posts', 'action'=>'index', 'user_account'=>$this->request->user_account]]) ?>
+<?= $this->Paginator->next('&raquo;', ['escape'=>false, 'tag'=>'li', 'url'=>['controller'=>'posts', 'action'=>'index', 'user_account'=>$this->request->user_account]], null, ['class'=>'next disabled', 'escape'=>false, 'tag'=>'li', 'disabledTag'=>'a']) ?>
 </ul>

@@ -64,6 +64,9 @@ include dirname(__FILE__) . DS . 'bootstrap' . DS . 'environments.php';
  */
 CakePlugin::load('Migrations');
 CakePlugin::load('BoostCake');
+CakePlugin::load('Users', ['routes' => null]);
+CakePlugin::load('Utils');
+CakePlugin::load('Search');
 CakePlugin::load('DebugKit');
 
 /**
@@ -101,3 +104,6 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+// https://github.com/CakeDC/users/issues/189
+Configure::write('App.defaultEmail', 'noreply@example.com');

@@ -24,11 +24,25 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 
 	public $components = [
-		'DebugKit.Toolbar',
+		'Auth',
+		//'DebugKit.Toolbar',
+		'Session',
 	];
 
 	public $helpers = [
 		'Html' => ['className' => 'BoostCake.BoostCakeHtml'],
 		'Form' => ['className' => 'BoostCake.BoostCakeForm'],
 	];
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->Auth->fields = ['username' => 'email', 'password' => 'password'];
+		$this->Auth->loginAction = ['controller' => 'app_users', 'action' => 'login'];
+		$this->Auth->loginRedirect = $this->Session->read('Auth.redirect');
+		$this->Auth->logoutRedirect = '/';
+		$this->Auth->authError = __d('users', 'このURLにアクセスするにはログインが必要です');
+		$this->Auth->autoRedirect = true;
+		$this->Auth->userModel = 'User';
+		$this->Auth->userScope = ['OR' => ['AND' => ['User.active' => 1, 'User.email_verified' => 1]]];
+	}
 }
