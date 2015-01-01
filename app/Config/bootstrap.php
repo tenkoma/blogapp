@@ -64,6 +64,9 @@ include dirname(__FILE__) . DS . 'bootstrap' . DS . 'environments.php';
  */
 CakePlugin::load('Migrations');
 CakePlugin::load('BoostCake');
+CakePlugin::load('Users');
+CakePlugin::load('Utils');
+CakePlugin::load('Search');
 CakePlugin::load('DebugKit');
 
 /**
