@@ -30,7 +30,7 @@ $steps->Given('/^自分の投稿を一覧表示する$/', function($world) {
     ]; // (3)
 });
 
-$steps->Given('/^ページ (\d+) に投稿が新しい順で (\d+) 件 表示されている$/', function($world, $page, $count) {
+$steps->Given('/^ページ (\d+) に投稿が新しい順で (\d+) 件表示されている$/', function($world, $page, $count) {
     // (4)
     $active = $world->getSession()->getPage()->find('css', '.pagination .active a');
     if ($active && ($page != $active->getText())) {
