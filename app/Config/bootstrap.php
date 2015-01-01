@@ -104,3 +104,6 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+// https://github.com/CakeDC/users/issues/189
+Configure::write('App.defaultEmail', 'noreply@example.com');
