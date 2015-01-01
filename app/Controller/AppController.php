@@ -25,7 +25,7 @@ class AppController extends Controller {
 
 	public $components = [
 		'Auth',
-		'DebugKit.Toolbar',
+		//'DebugKit.Toolbar',
 		'Session',
 	];
 
@@ -37,7 +37,7 @@ class AppController extends Controller {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->fields = ['username' => 'email', 'password' => 'password'];
-		$this->Auth->loginAction = ['controller' => 'users', 'action' => 'login', 'plugin' => 'users'];
+		$this->Auth->loginAction = ['controller' => 'app_users', 'action' => 'login'];
 		$this->Auth->loginRedirect = $this->Session->read('Auth.redirect');
 		$this->Auth->logoutRedirect = '/';
 		$this->Auth->authError = __d('users', 'このURLにアクセスするにはログインが必要です');

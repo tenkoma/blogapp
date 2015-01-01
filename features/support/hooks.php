@@ -3,7 +3,7 @@
 App::uses('CakeTestCase', 'TestSuite');
 class BddAllFixture extends CakeTestCase { // (1)
     public $fixtures = [
-        'app.post',
+        'app.post', 'plugin.users.user'
     ];
 }
 
@@ -31,4 +31,3 @@ $hooks->beforeScenario('', function($event) { // (2)
 $hooks->afterScenario('', function($event) {
     // do something after each scenario
 });
-
